@@ -5,7 +5,7 @@
     "description": "A starter to launch your blazing fast personal website and a blog, Built with Gatsby and Netlify CMS. Made with ❤ by Stackrole",
     "siteUrl": "https://purity-ui.com",
     "image": "/assets/photo_2020-10-14_08-35-17.jpg",
-    "iconimage": "https://media-exp1.licdn.com/dms/image/C4D03AQHKZBYljar_GA/profile-displayphoto-shrink_400_400/0/1604006038839?e=1626912000&v=beta&t=dMW6VE_asxa1CKLYs5KiipMDc265Afd8TzV11j6swS8",
+    "iconimage": "/assets/stackrole.png",
     "twitterUsername": "@anton_k_dev"
   },
   "ga": "UA-XXXXXXXXX-X"
