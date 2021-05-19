@@ -6,8 +6,8 @@
 const netlifyCmsPaths = {
   resolve: `gatsby-plugin-netlify-cms-paths`,
   options: {
-    cmsConfig: `/static/admin/config.yml`,
-  },
+    cmsConfig: `/static/admin/config.yml`
+  }
 }
 
 const settings = require("./src/util/site.json")
@@ -19,15 +19,15 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/static/assets/`,
-        name: `assets`,
-      },
+        name: `assets`
+      }
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/content/`,
-        name: `content`,
-      },
+        name: `content`
+      }
     },
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
@@ -45,8 +45,8 @@ module.exports = {
               showCaptions: true,
               linkImagesToOriginal: false,
               tracedSVG: true,
-              loading: "lazy",
-            },
+              loading: "lazy"
+            }
           },
           {
             resolve: `@gatsby-contrib/gatsby-plugin-elasticlunr-search`,
@@ -59,12 +59,12 @@ module.exports = {
                 MarkdownRemark: {
                   template: node => node.frontmatter.template,
                   title: node => node.frontmatter.title,
-                  slug: node => node.frontmatter.slug,
-                },
+                  slug: node => node.frontmatter.slug
+                }
               },
               // Optional filter to limit indexed nodes
-              filter: (node, getNode) => node.frontmatter.tags !== "exempt",
-            },
+              filter: (node, getNode) => node.frontmatter.tags !== "exempt"
+            }
           },
           `gatsby-remark-responsive-iframe`,
           {
@@ -78,11 +78,11 @@ module.exports = {
               // By default the HTML entities <>&'" are escaped.
               // Add additional HTML escapes by providing a mapping
               // of HTML entities and their escape value IE: { '}': '&#123;' }
-              escapeEntities: {},
-            },
-          },
-        ],
-      },
+              escapeEntities: {}
+            }
+          }
+        ]
+      }
     },
     `gatsby-plugin-sass`,
     `gatsby-plugin-react-helmet`,
@@ -91,22 +91,22 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-analytics`,
       options: {
-        trackingId: settings.ga,
-      },
+        trackingId: settings.ga
+      }
     },
     `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Foundation`,
-        short_name: `Foundation`,
+        name: `Purity UI`,
+        short_name: `Purity UI`,
         start_url: `/`,
         background_color: `#f7f0eb`,
         theme_color: `#a2466c`,
         display: `standalone`,
-        icon: "static" + settings.meta.iconimage,
-      },
+        icon: "static" + settings.meta.iconimage
+      }
     },
-    "gatsby-plugin-offline",
-  ],
+    "gatsby-plugin-offline"
+  ]
 }

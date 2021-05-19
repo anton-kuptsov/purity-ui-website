@@ -8,9 +8,9 @@ const Theme = () => {
   return (
     <div sx={themeStyles.modeOption}>
       <button
-        onClick={e => {
+        onClick={e =>
           setColorMode(colorMode === "default" ? "dark" : "default")
-        }}
+        }
       >
         <div sx={themeStyles.modeIcons}>
           <div>{colorMode === "default" ? <FiMoon /> : <FiSun />}</div>
@@ -34,21 +34,21 @@ const themeStyles = {
       mt: "-5px",
       p: "0 20px 0 0",
       "&:hover": {
-        color: "#bea9b3",
-      },
-    },
+        color: "#bea9b3"
+      }
+    }
   },
   modeIcons: {
     display: "flex",
     alignItems: "center",
     color: "#fff",
-    mt: "10px",
+    mt: "10px"
   },
   modeText: {
     fontSize: "16px",
     display: ["block", "block", "block", "none"],
     p: " 0 10px",
     mt: "-5px",
-    letterSpacing: "1px",
-  },
+    letterSpacing: "1px"
+  }
 }

@@ -22,31 +22,31 @@ const theme = {
     modes: {
       dark: {
         text: "#f5f5f5",
-        background: "#111",
+        background: "#19191D",
         primary: "#252525",
         accent: "#5C2941",
         muted: "rgba(255, 255, 255, 0.7)",
-        cardBg: "#252525",
+        cardBg: "#292A31",
         borderColor: "#888",
         labelText: "#777",
         inputBorder: "#777",
         inputBackground: "#333",
-        socialIcons: lightness("siteColor", 0.5),
+        socialIcons: "#9696A0",
         socialIconsHover: lightness("siteColor", 0.9),
         buttonColor: lightness("siteColor", 0.7),
         buttonHoverBg: lightness("siteColor", 0.3),
         buttonHoverColor: lightness("siteColor", 0.9),
-        ...darkColors,
-      },
-    },
+        ...darkColors
+      }
+    }
   },
   links: {
     postLink: {
       color: "muted",
       "&:hover": {
-        color: "text",
-      },
-    },
+        color: "text"
+      }
+    }
   },
   variants: {
     button: {
@@ -54,18 +54,18 @@ const theme = {
       color: "buttonColor",
       "&:hover": {
         bg: "buttonHoverBg",
-        color: "buttonHoverColor",
-      },
+        color: "buttonHoverColor"
+      }
     },
     socialIcons: {
       a: {
         color: "socialIcons",
         ":hover": {
-          color: "socialIconsHover",
-        },
-      },
-    },
-  },
+          color: "socialIconsHover"
+        }
+      }
+    }
+  }
 }
 
 export default theme
