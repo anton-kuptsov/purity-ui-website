@@ -87,8 +87,8 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
   }
 }
 
-exports.modifyWebpackConfig = ({ config, stage }) => {
+exports.modifyWebpackConfig = ({ actions, stage }) => {
   if (stage === "build-javascript") {
-    config.merge({ devtool: false })
+    actions.setWebpackConfig({ devtool: false })
   }
 }
