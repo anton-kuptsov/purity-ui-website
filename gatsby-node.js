@@ -47,8 +47,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       context: {
         id,
         previous,
-        next,
-      },
+        next
+      }
     })
 
     // Count blog posts.
@@ -69,8 +69,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         limit: postsPerPage,
         skip: i * postsPerPage,
         numPages,
-        currentPage: i + 1,
-      },
+        currentPage: i + 1
+      }
     })
   })
 }
@@ -82,7 +82,13 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
     createNodeField({
       node,
       name: `slug`,
-      value: slug,
+      value: slug
     })
+  }
+}
+
+exports.modifyWebpackConfig = ({ config, stage }) => {
+  if (stage === "build-javascript") {
+    config.merge({ devtool: false })
   }
 }
