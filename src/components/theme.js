@@ -5,17 +5,20 @@ import { FiMoon, FiSun } from "react-icons/fi"
 
 const Theme = () => {
   const [colorMode, setColorMode] = useColorMode()
+  const themeMode = localStorage.getItem("theme-ui-color-mode")
+  console.log("localStorage", localStorage)
   return (
     <div sx={themeStyles.modeOption}>
       <button
-        onClick={e =>
-          setColorMode(colorMode === "default" ? "dark" : "default")
+        onClick={() =>
+          setColorMode(colorMode => (colorMode === "light" ? "dark" : "light"))
         }
       >
         <div sx={themeStyles.modeIcons}>
-          <div>{colorMode === "default" ? <FiMoon /> : <FiSun />}</div>
+          <div>{colorMode === "dark" ? <FiSun /> : <FiMoon />}</div>
           <div sx={themeStyles.modeText}>
-            {colorMode === "default" ? "Dark" : "Light"}
+            {colorMode === "dark" ? "Dark" : "Light"}
+            {themeMode}
           </div>
         </div>
       </button>
