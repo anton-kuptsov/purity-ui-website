@@ -17,7 +17,7 @@ import {
   RiSkypeFill,
   RiDribbbleFill,
   RiMediumFill,
-  RiBehanceFill,
+  RiBehanceFill
 } from "react-icons/ri"
 import { FaWordpress, FaVk } from "react-icons/fa"
 
@@ -197,13 +197,13 @@ const HomePage = ({ data }) => {
   return (
     <Layout>
       <Seo />
-      <div className="home-banner grids col-1 sm-2">
+      <div className="home-banner grids col-1 sm-2" sx={{ bg: "bannerBg" }}>
         <div>
           <h1 className="title">{frontmatter.title}</h1>
           <p
             className="tagline"
             sx={{
-              color: "muted",
+              color: "muted"
             }}
           >
             {frontmatter.tagline}
@@ -216,7 +216,7 @@ const HomePage = ({ data }) => {
             to={frontmatter.cta.ctaLink}
             className="button"
             sx={{
-              variant: "variants.button",
+              variant: "variants.button"
             }}
           >
             {frontmatter.cta.ctaText}
@@ -227,7 +227,7 @@ const HomePage = ({ data }) => {
           <div
             className="social-icons"
             sx={{
-              variant: "variants.socialIcons",
+              variant: "variants.socialIcons"
             }}
           >
             {sIcons}

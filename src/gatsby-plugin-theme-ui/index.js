@@ -21,6 +21,7 @@ const theme = {
     buttonHoverBg: lightness("siteColor", 0.4),
     buttonHoverColor: lightness("siteColor", 0.8),
     footerBg: "#292a31",
+    bannerBg: "#fff",
     modes: {
       dark: {
         text: "#f5f5f5",
@@ -38,6 +39,7 @@ const theme = {
         buttonColor: lightness("siteColor", 0.7),
         buttonHoverBg: lightness("siteColor", 0.3),
         buttonHoverColor: lightness("siteColor", 0.9),
+        bannerBg: "transparent",
         ...darkColors
       }
     }
