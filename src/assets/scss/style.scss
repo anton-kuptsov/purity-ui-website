@@ -2,6 +2,8 @@
 @import "defaults";
 @import "lib/css-grid-utility";
 
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600&display=swap");
+
 // .primary-container {
 // 	display: grid;
 // 	grid-template-rows: 60px auto 60px;
@@ -93,7 +95,10 @@
   padding: 0 20px;
 }
 .site-logo {
-  font-weight: bold;
+  font-family: var(--font-family-manrope);
+  font-weight: 600;
+  font-size: 3rem;
+  letter-spacing: 0.25em;
   a {
     color: #fff;
     text-decoration: none;
