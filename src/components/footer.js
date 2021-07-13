@@ -7,7 +7,7 @@ const Footer = () => (
   <footer
     className="site-footer"
     sx={{
-      bg: "siteColor"
+      bg: "footerBg"
     }}
   >
     <div className="container">
@@ -16,7 +16,7 @@ const Footer = () => (
         <span className="icon -love">
           <RiHeart2Line />
         </span>{" "}
-        by <Link to="/">purity-ui.com</Link> & stackrole.com
+        by <Link to="/">purity-ui.com</Link>
       </p>
     </div>
   </footer>

@@ -18,6 +18,7 @@
   align-items: center;
   position: relative;
   padding: 30px 20px;
+  z-index: 1;
 }
 .site-navigation {
   ul {
@@ -94,6 +95,21 @@
   max-width: 1240px;
   padding: 0 20px;
 }
+
+@media (min-width: $breakpoint-md) {
+  main:before {
+    background: var(--theme-ui-colors-siteColor);
+    content: " ";
+    display: block;
+    height: 12rem;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+}
+
 .site-logo {
   font-family: var(--font-family-manrope);
   font-weight: 600;
@@ -101,18 +117,23 @@
   letter-spacing: 0.25em;
   a {
     color: #fff;
-    text-decoration: none;
+    text-decoration: underline;
     &:hover {
       color: #fff;
     }
   }
   @media (max-width: $breakpoint-lg) {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 }
 .home-banner {
-  padding: 60px 0;
+  // padding: 60px 0;
   align-items: center;
+  position: relative;
+  z-index: 1;
+  border-radius: 1rem;
+  padding: 4rem;
+  background: #fff;
   .title {
     font-size: 48px;
     line-height: 48px;
@@ -128,6 +149,7 @@
     border-radius: 12px;
   }
   @media (max-width: $breakpoint-sm) {
+    z-index: 0;
     padding: 30px 0;
     .title {
       font-size: 38px;
@@ -344,13 +366,12 @@ article img {
 .site-footer {
   display: flex;
   align-items: center;
-  background: #eee;
   text-align: center;
   font-size: 14px;
   padding: 20px 0;
   p {
     margin: 0;
-    color: #fff;
+    color: #d1d5db;
   }
   a {
     font-weight: normal;

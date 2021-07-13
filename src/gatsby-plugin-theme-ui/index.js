@@ -1,10 +1,11 @@
-import defaultColors from "../util/default-colors.json"
+// import defaultColors from "../util/default-colors.json"
 import darkColors from "../util/dark-theme-colors.json"
 import { lightness } from "@theme-ui/color"
 const theme = {
   colors: {
-    ...defaultColors,
-    text: "#000",
+    // ...defaultColors,
+    siteColor: "rgba(217,70,239,1)",
+    text: "#292a31",
     background: "#fff",
     primary: "#5C2941",
     accent: "#fff",
@@ -19,6 +20,7 @@ const theme = {
     buttonColor: lightness("siteColor", 0.9),
     buttonHoverBg: lightness("siteColor", 0.4),
     buttonHoverColor: lightness("siteColor", 0.8),
+    footerBg: "#292a31",
     modes: {
       dark: {
         text: "#f5f5f5",

@@ -12,13 +12,13 @@ export default class Search extends Component {
     this.handleToggleClick = this.handleToggleClick.bind(this)
     this.state = {
       query: ``,
-      results: [],
+      results: []
     }
   }
 
   handleToggleClick() {
     this.setState(state => ({
-      showSearch: !state.showSearch,
+      showSearch: !state.showSearch
     }))
   }
 
@@ -67,7 +67,7 @@ export default class Search extends Component {
       query,
       results: this.index
         .search(query, {})
-        .map(({ ref }) => this.index.documentStore.getDoc(ref)),
+        .map(({ ref }) => this.index.documentStore.getDoc(ref))
     })
   }
 }
@@ -75,7 +75,7 @@ export default class Search extends Component {
 const searchStyle = {
   searchResults: {
     borderRadius: "0 0 6px 6px",
-    display: "none",
+    display: "none"
   },
   searchField: {
     zIndex: "11111",
@@ -87,7 +87,7 @@ const searchStyle = {
       display: "flex",
       alignItems: "center",
       color: "#fff",
-      cursor: "pointer",
+      cursor: "pointer"
     },
     position: ["none", "relative"],
     ".search-container": {
@@ -100,14 +100,14 @@ const searchStyle = {
       textAlign: "center",
       overflow: "hidden",
       boxShadow:
-        "0px 0px 50px 0px rgba(0,0,0,.1), 0px 0px 1px 1px rgba(0,0,0,.1)",
+        "0px 0px 50px 0px rgba(0,0,0,.1), 0px 0px 1px 1px rgba(0,0,0,.1)"
     },
     ".search-input": {
       bg: "#fff",
       color: "#000",
       borderRadius: "0",
       boxShadow: "none",
-      border: "none",
+      border: "none"
     },
     ".search": {
       cursor: "pointer",
@@ -115,7 +115,7 @@ const searchStyle = {
       display: "flex",
       justifyContent: "center",
       "&:hover, &:focus": {
-        color: "rgba(255, 255, 255, 0.8)",
+        color: "rgba(255, 255, 255, 0.8)"
       },
       "&.is-active": {
         color: "rgba(255, 255, 255, 0.8)",
@@ -133,44 +133,44 @@ const searchStyle = {
           "@keyframes animation": {
             "0%": {
               opacity: 0,
-              transform: "scale(0)",
+              transform: "scale(0)"
             },
             "50%": {
-              transform: "scale(1)",
+              transform: "scale(1)"
             },
             "100%": {
               opacity: 1,
-              transform: "scale(1)",
-            },
+              transform: "scale(1)"
+            }
           },
           input: {
             width: ["100%", "300px"],
-            maxWidth: "100",
+            maxWidth: "100%",
             outline: "none",
             fontSize: "16px",
             p: 3,
-            borderBottom: "1px solid #eee",
+            borderBottom: "1px solid #eee"
           },
           ul: {
             display: "block",
             bg: "#fff",
             pl: 0,
-            m: 0,
+            m: 0
           },
           "ul > li": {
             listStyle: "none",
-            textAlign: "left",
+            textAlign: "left"
           },
           "ul > li > a": {
             display: "block",
             color: "#000",
             p: 3,
             "&:hover": {
-              color: "#9b9b9b",
-            },
-          },
-        },
-      },
-    },
-  },
+              color: "#9b9b9b"
+            }
+          }
+        }
+      }
+    }
+  }
 }
