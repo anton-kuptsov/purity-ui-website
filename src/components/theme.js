@@ -6,7 +6,7 @@ import { FiMoon, FiSun } from "react-icons/fi"
 const Theme = () => {
   const [colorMode, setColorMode] = useColorMode()
   const themeMode = localStorage.getItem("theme-ui-color-mode")
-  console.log("localStorage", localStorage)
+
   return (
     <div sx={themeStyles.modeOption}>
       <button
