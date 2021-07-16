@@ -9,6 +9,11 @@
 // 	grid-template-rows: 60px auto 60px;
 // 	min-height: 100vh;
 // }
+
+body[data-theme="dark"] {
+  --background-color: #c4c4c4;
+}
+
 .primary-container main {
   min-height: calc(100vh - 60px - 81px);
 }

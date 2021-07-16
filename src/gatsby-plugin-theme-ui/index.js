@@ -1,5 +1,5 @@
 // import defaultColors from "../util/default-colors.json"
-import darkColors from "../util/dark-theme-colors.json"
+// import darkColors from "../util/dark-theme-colors.json"
 import { lightness } from "@theme-ui/color"
 const theme = {
   colors: {
@@ -39,8 +39,8 @@ const theme = {
         buttonColor: lightness("siteColor", 0.7),
         buttonHoverBg: lightness("siteColor", 0.3),
         buttonHoverColor: lightness("siteColor", 0.9),
-        bannerBg: "transparent",
-        ...darkColors
+        bannerBg: "#19191D",
+        siteColor: "#424242"
       }
     }
   },

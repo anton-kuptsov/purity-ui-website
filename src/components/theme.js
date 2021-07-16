@@ -1,23 +1,21 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import { useColorMode } from "theme-ui"
+// import { useColorMode } from "theme-ui"
 import { FiMoon, FiSun } from "react-icons/fi"
+import { useThemeMode } from "../hook"
 
 const Theme = () => {
-  const [colorMode, setColorMode] = useColorMode()
+  // const [colorMode, setColorMode] = useColorMode()
+  const [isDark, setIsDark] = useThemeMode()
+
+  console.log("is dark?", isDark)
 
   return (
     <div sx={themeStyles.modeOption}>
-      <button
-        onClick={() =>
-          setColorMode(colorMode => (colorMode === "light" ? "dark" : "light"))
-        }
-      >
+      <button onClick={() => setIsDark(!isDark)}>
         <div sx={themeStyles.modeIcons}>
-          <div>{colorMode === "dark" ? <FiSun /> : <FiMoon />}</div>
-          <div sx={themeStyles.modeText}>
-            {colorMode === "light" ? "Dark" : "Light"}
-          </div>
+          <div>{isDark ? <FiSun /> : <FiMoon />}</div>
+          <div sx={themeStyles.modeText}>{!isDark ? "Dark" : "Light"}</div>
         </div>
       </button>
     </div>
