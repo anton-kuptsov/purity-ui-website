@@ -5,7 +5,7 @@ export const useThemeMode = () => {
     if (!localStorage.getItem("theme-mode")) {
       localStorage.setItem("theme-mode", "light")
       document
-        .getElementsByTagName("body")[0]
+        .getElementsByTagName("html")[0]
         .setAttribute("data-theme", localStorage.getItem("theme"))
     }
   }, [])
@@ -17,7 +17,7 @@ export const useThemeMode = () => {
 
   const toggleMode = () => {
     console.log("localStorage", localStorage)
-    const htmlAttr = document.getElementsByTagName("body")[0]
+    const htmlAttr = document.getElementsByTagName("html")[0]
     if (isDark === false) {
       localStorage.setItem("theme-mode", "dark")
       htmlAttr.setAttribute("data-theme", "dark")
