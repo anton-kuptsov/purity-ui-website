@@ -9,7 +9,9 @@ export const useThemeMode = () => {
         .setAttribute("data-theme", localStorage.getItem("theme"))
     }
   }, [])
-  const currentThemeMode = localStorage.getItem("theme-mode")
+
+  const currentThemeMode =
+    typeof window !== "undefined" ? localStorage.getItem("theme-mode") : "light"
 
   const [isDark, setIsDark] = useState(currentThemeMode === "dark")
 
