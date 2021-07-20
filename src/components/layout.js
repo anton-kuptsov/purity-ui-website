@@ -8,7 +8,7 @@ import Navigation from "./navigation"
 
 import "../assets/scss/style.scss"
 import Footer from "./footer"
-import Theme from "../components/theme"
+import { ThemeSwitcher } from "./themeSwitcher"
 import Search from "../components/search"
 
 const query = graphql`
@@ -40,7 +40,7 @@ const Layout = ({ children, className, props }) => {
         </div>
         <div sx={layoutStyle.appearance}>
           <Search searchIndex={siteSearchIndex.index} />
-          <Theme />
+          <ThemeSwitcher />
         </div>
       </Header>
       <main className={"container" + (className ? " " + className : "")}>

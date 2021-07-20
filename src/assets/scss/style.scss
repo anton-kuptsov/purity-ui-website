@@ -10,8 +10,11 @@
 // 	min-height: 100vh;
 // }
 
-[data-theme="dark"] {
-  --background-color: #19191d;
+main:before {
+  background: var(--header-bg);
+}
+.primary-container {
+  background: var(--bg);
 }
 
 .primary-container main {
@@ -24,6 +27,7 @@
   position: relative;
   padding: 30px 20px;
   z-index: 1;
+  background-color: var(--header-bg);
 }
 .site-navigation {
   ul {
@@ -103,7 +107,6 @@
 
 @media (min-width: $breakpoint-md) {
   main:before {
-    background: var(--theme-ui-colors-siteColor);
     content: " ";
     display: block;
     height: 12rem;
@@ -374,9 +377,10 @@ article img {
   text-align: center;
   font-size: 14px;
   padding: 20px 0;
+  background: var(--bg);
   p {
     margin: 0;
-    color: #d1d5db;
+    color: var(--text);
   }
   a {
     font-weight: normal;

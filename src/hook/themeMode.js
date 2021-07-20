@@ -6,7 +6,7 @@ export const useThemeMode = () => {
       localStorage.setItem("theme-mode", "light")
       document
         .getElementsByTagName("html")[0]
-        .setAttribute("data-theme", localStorage.getItem("theme"))
+        .setAttribute("data-theme", localStorage.getItem("theme-mode"))
     }
   }, [])
 
@@ -16,25 +16,15 @@ export const useThemeMode = () => {
   const [isDark, setIsDark] = useState(currentThemeMode === "dark")
 
   const toggleMode = () => {
-    console.log("localStorage", localStorage)
-    const htmlAttr = document.getElementsByTagName("html")[0]
-    if (isDark === false) {
-      localStorage.setItem("theme-mode", "dark")
-      htmlAttr.setAttribute("data-theme", "dark")
-      setIsDark(true)
-    } else {
-      localStorage.setItem("theme-mode", "light")
-      htmlAttr.setAttribute("data-theme", "light")
-      setIsDark(false)
-    }
+    //get reversed theme mode
+    const themeMode = isDark ? "light" : "dark"
+
+    localStorage.setItem("theme-mode", themeMode)
+    document
+      .getElementsByTagName("html")[0]
+      .setAttribute("data-theme", themeMode)
+    setIsDark(!isDark)
   }
-
-  // useEffect(() => {
-
-  //   isDark
-  //     ? localStorage.setItem("theme-mode", "dark")
-  //     : localStorage.setItem("theme-mode", "light")
-  // }, [isDark])
 
   return [isDark, toggleMode]
 }

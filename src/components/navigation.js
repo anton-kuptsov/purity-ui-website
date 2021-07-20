@@ -3,25 +3,25 @@ import { jsx } from "theme-ui"
 import React from "react"
 import { Link } from "gatsby"
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri"
-import Theme from "../components/theme"
+import { ThemeSwitcher } from "./themeSwitcher"
 
 const MenuItems = [
   {
     path: "/",
-    title: "Home",
+    title: "Home"
   },
   {
     path: "/about",
-    title: "About",
+    title: "About"
   },
   {
     path: "/blog",
-    title: "Blog",
+    title: "Blog"
   },
   {
     path: "/contact",
-    title: "Contact",
-  },
+    title: "Contact"
+  }
 ]
 
 const ListLink = props => (
@@ -39,7 +39,7 @@ class Navigation extends React.Component {
 
   handleToggleClick() {
     this.setState(state => ({
-      showMenu: !state.showMenu,
+      showMenu: !state.showMenu
     }))
   }
 
@@ -66,7 +66,7 @@ class Navigation extends React.Component {
           {listMenuItems}
           <div sx={navStyle.border}></div>
           <div sx={navStyle.theme}>
-            <Theme />
+            <ThemeSwitcher />
           </div>
         </ul>
       </nav>
@@ -79,16 +79,16 @@ export default Navigation
 const navStyle = {
   menu: {
     ul: {
-      bg: "siteColor",
-    },
+      bg: "siteColor"
+    }
   },
   theme: {
     display: ["block", "block", "block", "none"],
-    p: " 25px 20px 20px",
+    p: " 25px 20px 20px"
   },
   border: {
     bg: "borderColor",
     borderTop: "1px solid transparent",
-    display: ["block", "block", "block", "none"],
-  },
+    display: ["block", "block", "block", "none"]
+  }
 }

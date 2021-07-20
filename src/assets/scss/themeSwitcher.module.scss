@@ -1,0 +1,31 @@
+@import "theme-variables";
+
+.text {
+  font-size: 16px;
+  display: none;
+  padding: 0 10px;
+  margin-top: -5px;
+  letter-spacing: 1px;
+  color: inherit;
+}
+
+.container button {
+  font-size: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  margin-top: -5px;
+  padding: 0 20px 0 0;
+}
+.icons {
+  display: flex;
+  align-items: center;
+  color: var(--theme-switch);
+  margin-top: 10px;
+}
+
+@media (max-width: $breakpoint-md) {
+  .text {
+    display: block;
+  }
+}

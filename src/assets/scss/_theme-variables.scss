@@ -29,5 +29,29 @@ $breakpoint-xl: 1200px;
   // CSS Grid Utility
   --grid-gap: 30px;
 
-  --background-color: #fff;
+  --white: #fff;
+  --gray50: #fafafa;
+  --gray300: #d4d4d8;
+  --gray500: #71717a;
+  --gray800: #27272a;
+  --gray900: #18181b;
+
+  --header-bg: var(--gray800);
+  --bg: var(--gray50);
+  --text: var(--gray500);
+  --theme-switch: var(--gray50);
+}
+
+[data-theme="dark"] {
+  --bg: var(--gray800);
+  --header-bg: var(--gray900);
+  --text: var(--gray50);
+
+  /*
+  light:
+  bground: bg-gray-50;
+  text: text-gray-900, text-gray-500
+  header: bg-gray-900 text-gray-300
+
+  */
 }
