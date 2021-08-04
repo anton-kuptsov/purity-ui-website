@@ -5,9 +5,9 @@ const theme = {
   colors: {
     // ...defaultColors,
     siteColor: "rgba(217,70,239,1)",
-    text: "#292a31",
-    background: "#fff",
-    primary: "#5C2941",
+    // text: "#292a31",
+    // background: "#fff",
+    // primary: "#5C2941",
     accent: "#fff",
     muted: "rgba(0, 0, 0, 0.7)",
     cardBg: "#fff",

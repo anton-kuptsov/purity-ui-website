@@ -9,7 +9,11 @@ $breakpoint-xl: 1200px;
     helvetica neue, helvetica, Ubuntu, roboto, noto, segoe ui, arial, sans-serif;
   --font-family-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console,
     monospace;
-  --font-family-manrope: "Manrope", sans-serif;
+
+  --font-manrope: "Manrope", sans-serif;
+  --font-poppins: "Poppins", sans-serif;
+  --font-roboto: "Roboto", sans-serif;
+
   --font-size-small: 12px;
 
   --home-link-color: #d4d4d4;
@@ -30,6 +34,7 @@ $breakpoint-xl: 1200px;
   --grid-gap: 30px;
 
   --white: #fff;
+  --black: #000;
   --gray50: #fafafa;
   --gray300: #d4d4d8;
   --gray500: #71717a;
@@ -37,15 +42,19 @@ $breakpoint-xl: 1200px;
   --gray900: #18181b;
 
   --header-bg: var(--gray800);
-  --bg: var(--gray50);
-  --text: var(--gray500);
+  --bg: hsl(0, 0%, 10%);
+  --text: var(--white);
+  --text-black: var(--black);
   --theme-switch: var(--gray50);
+  --footer-bg: var(--gray800);
+  --menu-bg: var(--bg);
+  --menu-line: var(--gray800);
 }
 
 [data-theme="dark"] {
   --bg: var(--gray800);
   --header-bg: var(--gray900);
-  --text: var(--gray50);
+  --text: var(--white);
 
   /*
   light:

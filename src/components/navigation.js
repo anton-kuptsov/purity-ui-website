@@ -1,9 +1,8 @@
-/** @jsx jsx */
-import { jsx } from "theme-ui"
-import React from "react"
+import React, { useState } from "react"
 import { Link } from "gatsby"
 import { RiMenu3Line, RiCloseLine } from "react-icons/ri"
 import { ThemeSwitcher } from "./themeSwitcher"
+import * as style from "./nav.module.scss"
 
 const MenuItems = [
   {
@@ -30,65 +29,41 @@ const ListLink = props => (
   </li>
 )
 
-class Navigation extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = { showMenu: false }
-    this.handleToggleClick = this.handleToggleClick.bind(this)
+export const NavBar = () => {
+  const [isShowMenu, setShowMenu] = useState(false)
+
+  const toggleMenu = () => {
+    setShowMenu(!isShowMenu)
   }
 
-  handleToggleClick() {
-    this.setState(state => ({
-      showMenu: !state.showMenu
-    }))
-  }
+  const listMenuItems = MenuItems.map((menuItem, index) => (
+    <ListLink key={index} to={menuItem.path}>
+      {menuItem.title}
+    </ListLink>
+  ))
 
-  render() {
-    const listMenuItems = MenuItems.map((menuItem, index) => (
-      <ListLink key={index} to={menuItem.path}>
-        {menuItem.title}
-      </ListLink>
-    ))
-    return (
-      <nav className="site-navigation" sx={navStyle.menu}>
-        <button
-          onClick={this.handleToggleClick}
-          className={"menu-trigger" + (this.state.showMenu ? " is-active" : "")}
-        >
-          <div className="icon-menu-line">
-            <RiMenu3Line />
-          </div>
-          <div className="icon-menu-close">
-            <RiCloseLine />
-          </div>
-        </button>
-        <ul>
-          {listMenuItems}
-          <div sx={navStyle.border}></div>
-          <div sx={navStyle.theme}>
-            <ThemeSwitcher />
-          </div>
-        </ul>
-      </nav>
-    )
-  }
-}
-
-export default Navigation
-
-const navStyle = {
-  menu: {
-    ul: {
-      bg: "siteColor"
-    }
-  },
-  theme: {
-    display: ["block", "block", "block", "none"],
-    p: " 25px 20px 20px"
-  },
-  border: {
-    bg: "borderColor",
-    borderTop: "1px solid transparent",
-    display: ["block", "block", "block", "none"]
-  }
+  return (
+    <nav className={style.container}>
+      <button
+        onClick={toggleMenu}
+        className={
+          style.menu_trigger + " " + (isShowMenu ? style.is_active : "")
+        }
+      >
+        <div className={style.icon_menu_line}>
+          <RiMenu3Line />
+        </div>
+        <div className={style.icon_menu_close}>
+          <RiCloseLine />
+        </div>
+      </button>
+      <ul>
+        {listMenuItems}
+        <div className={style.line} />
+        <div className={style.switcher}>
+          <ThemeSwitcher />
+        </div>
+      </ul>
+    </nav>
+  )
 }
