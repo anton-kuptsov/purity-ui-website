@@ -8,4 +8,5 @@ cta:
   ctaText: Know more
   ctaLink: /about
 ---
-Hi, folks! :) Glad to see you!
+
+If you don’t fail, you don’t learn.
