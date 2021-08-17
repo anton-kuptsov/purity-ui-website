@@ -3,11 +3,11 @@ template: blog-post
 title: Javascript trick with bitwise OR
 slug: /javascript-tricks
 date: 2021-07-20 14:26
-description: Another new blog about front-end development :)
+description: Javascript tricks - while-cycle against for-cycle and bitwise OR against Math.floor()
 featuredImage: /assets/nathan-da-silva-xpkN1KEY8lM-unsplash.jpg
 ---
 
-Hi, folks!
+Hello, everyone!
 
 I was looking through different source code on github and saw a couple of interesting JavaScript tricks from the [nanoid repository](https://github.com/ai/nanoid):
 

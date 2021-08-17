@@ -1,6 +1,5 @@
 /** @jsx jsx */
 import { jsx } from "theme-ui"
-import React from "react"
 import { Link, graphql } from "gatsby"
 import { RiArrowRightLine, RiArrowLeftLine } from "react-icons/ri"
 import Layout from "../components/layout"
@@ -10,15 +9,15 @@ import Seo from "../components/seo"
 const styles = {
   pagination: {
     a: {
-      color: "muted",
+      color: "black",
       "&.is-active": {
-        color: "text",
+        color: "black"
       },
       "&:hover": {
-        color: "text",
-      },
-    },
-  },
+        color: "blackHover"
+      }
+    }
+  }
 }
 
 export const blogListQuery = graphql`
@@ -84,44 +83,40 @@ const Pagination = props => (
     </ul>
   </div>
 )
-class BlogIndex extends React.Component {
-  render() {
-    const { data } = this.props
-    const { currentPage, numPages } = this.props.pageContext
-    const blogSlug = "/blog/"
-    const isFirst = currentPage === 1
-    const isLast = currentPage === numPages
-    const prevPage =
-      currentPage - 1 === 1 ? blogSlug : blogSlug + (currentPage - 1).toString()
-    const nextPage = blogSlug + (currentPage + 1).toString()
 
-    const posts = data.allMarkdownRemark.edges
-      .filter(edge => !!edge.node.frontmatter.date)
-      .map(edge => <PostCard key={edge.node.id} data={edge.node} />)
-    let props = {
-      isFirst,
-      prevPage,
-      numPages,
-      blogSlug,
-      currentPage,
-      isLast,
-      nextPage,
-    }
+const BlogIndex = ({ data, pageContext }) => {
+  const { currentPage, numPages } = pageContext
+  const blogSlug = "/blog/"
+  const isFirst = currentPage === 1
+  const isLast = currentPage === numPages
+  const prevPage =
+    currentPage - 1 === 1 ? blogSlug : blogSlug + (currentPage - 1).toString()
+  const nextPage = blogSlug + (currentPage + 1).toString()
 
-    return (
-      <Layout className="blog-page">
-        <Seo
-          title={"Blog — Page " + currentPage + " of " + numPages}
-          description={
-            "Stackrole base blog page " + currentPage + " of " + numPages
-          }
-        />
-        <h1>Blog</h1>
-        <div className="grids col-1 sm-2 lg-3">{posts}</div>
-        <Pagination {...props} />
-      </Layout>
-    )
+  const posts = data.allMarkdownRemark.edges
+    .filter(edge => !!edge.node.frontmatter.date)
+    .map(edge => <PostCard key={edge.node.id} data={edge.node} />)
+  let props = {
+    isFirst,
+    prevPage,
+    numPages,
+    blogSlug,
+    currentPage,
+    isLast,
+    nextPage
   }
+
+  return (
+    <Layout className="blog-page">
+      <Seo
+        title={"PurityUI blog posts page " + currentPage + " of " + numPages}
+        description="PurityUI blog posts about frontend development"
+      />
+      <h1>Blog posts about frontend</h1>
+      <div className="grids col-1 sm-2 lg-3">{posts}</div>
+      <Pagination {...props} />
+    </Layout>
+  )
 }
 
 export default BlogIndex

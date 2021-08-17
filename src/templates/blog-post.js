@@ -9,19 +9,19 @@ import Seo from "../components/seo"
 
 const styles = {
   "article blockquote": {
-    "background-color": "cardBg",
+    "background-color": "cardBg"
   },
   pagination: {
     a: {
       color: "muted",
       "&.is-active": {
-        color: "text",
+        color: "text"
       },
       "&:hover": {
-        color: "text",
-      },
-    },
-  },
+        color: "text"
+      }
+    }
+  }
 }
 
 const Pagination = props => (
@@ -32,7 +32,7 @@ const Pagination = props => (
           <Link to={props.previous.frontmatter.slug} rel="prev">
             <p
               sx={{
-                color: "muted",
+                color: "muted"
               }}
             >
               <span className="icon -left">
@@ -51,7 +51,7 @@ const Pagination = props => (
           <Link to={props.next.frontmatter.slug} rel="next">
             <p
               sx={{
-                color: "muted",
+                color: "muted"
               }}
             >
               Next{" "}
@@ -78,7 +78,7 @@ const Post = ({ data, pageContext }) => {
 
   let props = {
     previous,
-    next,
+    next
   }
 
   return (
@@ -95,16 +95,14 @@ const Post = ({ data, pageContext }) => {
         <header className="featured-banner">
           <section className="article-header">
             <h1>{frontmatter.title}</h1>
-            <time sx={{color: "muted"}}>{frontmatter.date}</time>
+            <time sx={{ color: "blackHover" }}>{frontmatter.date}</time>
           </section>
-          {Image ? (
+          {Image && (
             <GatsbyImage
               image={Image}
               alt={frontmatter.title + " - Featured image"}
               className="featured-image"
             />
-          ) : (
-            ""
           )}
         </header>
 

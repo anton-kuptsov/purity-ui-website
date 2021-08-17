@@ -8,8 +8,10 @@ const theme = {
     // text: "#292a31",
     // background: "#fff",
     // primary: "#5C2941",
+    blackHover: "#000",
+    black: "rgba(0, 0, 0, 0.7)",
     accent: "#fff",
-    muted: "rgba(0, 0, 0, 0.7)",
+    muted: "rgba(255, 255, 255, 0.7)",
     cardBg: "#fff",
     borderColor: "#540229",
     labelText: "#777",
@@ -23,32 +25,14 @@ const theme = {
     footerBg: "#292a31",
     bannerBg: "#fff",
     modes: {
-      dark: {
-        // text: "#f5f5f5",
-        // background: "#19191D",
-        // primary: "#252525",
-        // accent: "#5C2941",
-        // muted: "rgba(255, 255, 255, 0.7)",
-        // cardBg: "#424242",
-        // borderColor: "#888",
-        // labelText: "#777",
-        // inputBorder: "#777",
-        // inputBackground: "#333",
-        // socialIcons: "#BDBDBD",
-        // socialIconsHover: lightness("siteColor", 0.9),
-        // buttonColor: lightness("siteColor", 0.7),
-        // buttonHoverBg: lightness("siteColor", 0.3),
-        // buttonHoverColor: lightness("siteColor", 0.9),
-        // bannerBg: "#19191D",
-        // siteColor: "#424242"
-      }
+      dark: {}
     }
   },
   links: {
     postLink: {
-      color: "muted",
+      color: "black",
       "&:hover": {
-        color: "text"
+        color: "blackHover"
       }
     }
   },

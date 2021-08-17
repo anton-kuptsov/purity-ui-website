@@ -7,10 +7,10 @@ const PostCard = ({ data }) => (
   <article
     className="post-card"
     sx={{
-      bg: "cardBg",
+      bg: "cardBg"
     }}
   >
-    {data.frontmatter.featuredImage ? (
+    {data.frontmatter.featuredImage && (
       <Link to={data.frontmatter.slug}>
         <GatsbyImage
           image={data.frontmatter.featuredImage.childImageSharp.gatsbyImageData}
@@ -18,15 +18,13 @@ const PostCard = ({ data }) => (
           className="featured-image"
         />
       </Link>
-    ) : (
-      ""
     )}
     <div className="post-content">
       <h2 className="title">
         <Link
           to={data.frontmatter.slug}
           sx={{
-            variant: "links.postLink",
+            variant: "links.postLink"
           }}
         >
           {data.frontmatter.title}
@@ -35,7 +33,7 @@ const PostCard = ({ data }) => (
       <p
         className="meta"
         sx={{
-          color: "muted",
+          color: "black"
         }}
       >
         <time>{data.frontmatter.date}</time>
