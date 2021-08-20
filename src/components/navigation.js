@@ -25,7 +25,9 @@ const MenuItems = [
 
 const ListLink = props => (
   <li>
-    <Link to={props.to}>{props.children}</Link>
+    <Link to={props.to} className={style.link}>
+      {props.children}
+    </Link>
   </li>
 )
 

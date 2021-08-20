@@ -24,7 +24,7 @@ Let’s figure out how it works. So, here we go.
 
 Look at the loop. In the code it is commented as follows:
 
-> _"A compact alternative for `for (var i = 0; i < step; i++)`"_
+> _"A compact alternative for `for (var i = 0; i < step; i++)` "_
 
 Here the while-cycle's counter `i` is decremented by the decrement operator until it reaches zero, which ends the cycle, since _`0 === false`_.
 
