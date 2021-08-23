@@ -130,7 +130,13 @@ main:before {
   background-color: #fff;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.05);
   border-radius: 12px;
-  transition: box-shadow 0.3s linear;
+  transition: transform 0.2s, box-shadow 0.3s linear;
+
+  &:hover {
+    transform: scale(1.025);
+    transition: transform 0.2s;
+  }
+
   .featured-image {
     border-radius: 12px;
     img {
@@ -391,4 +397,4 @@ article img {
 @import "utility";
 
 // Libraries
-@import "lib/prism-default";
+@import "lib/prism-custom";

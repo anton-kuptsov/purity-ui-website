@@ -33,6 +33,8 @@ $breakpoint-xl: 1200px;
   --white: #fff;
   --black: #000;
   --color-active: rgba(217, 70, 239, 1);
+  --bg: #070825;
+  --color: #f1f1f1;
 
   // CSS Grid Utility
   --grid-gap: 30px;
@@ -46,7 +48,7 @@ $breakpoint-xl: 1200px;
   --gray900: #18181b;
 
   --header-bg: var(--gray800);
-  --bg: hsl(0, 0%, 10%);
+  // --bg: hsl(0, 0%, 10%);
   --text: var(--white);
   --text-black: var(--black);
   --theme-switch: var(--gray50);

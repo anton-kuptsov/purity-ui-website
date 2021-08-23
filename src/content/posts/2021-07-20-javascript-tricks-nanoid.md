@@ -1,7 +1,7 @@
 ---
 template: blog-post
 title: Javascript trick with bitwise OR
-slug: /javascript-tricks
+slug: /blog/javascript-tricks
 date: 2021-07-20 14:26
 description: Javascript tricks - while-cycle against for-cycle and bitwise OR against Math.floor()
 featuredImage: /assets/nathan-da-silva-xpkN1KEY8lM-unsplash.jpg
@@ -11,7 +11,7 @@ Hello, everyone!
 
 I was looking through different source code on github and saw a couple of interesting JavaScript tricks from the [nanoid repository](https://github.com/ai/nanoid):
 
-```
+```JS
 let i = size;
 
 while (i--) {
@@ -24,7 +24,7 @@ Let’s figure out how it works. So, here we go.
 
 Look at the loop. In the code it is commented as follows:
 
-> _"A compact alternative for `for (var i = 0; i < step; i++)` "_
+> _"A compact alternative for `' for (var i = 0; i < step; i++) '` "_
 
 Here the while-cycle's counter `i` is decremented by the decrement operator until it reaches zero, which ends the cycle, since _`0 === false`_.
 
@@ -45,7 +45,7 @@ But back to the bitwise operator OR (|), which returns a 1 in corresponding bit 
 
 Let's slightly modify [this example](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Bitwise_OR) and take a look at the result:
 
-```
+```JS
 const a = 7.213545;
 const b = 0;
 console.log(a | b); // expected output: 7
